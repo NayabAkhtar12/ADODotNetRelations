@@ -1,16 +1,11 @@
 ﻿using System.Data.SqlClient;
-
-//using SqlComman System.Data.SqlClient.SqlCommand;
-//using SqlConnection = System.Data.SqlClient.SqlConnection;
-//using SqlDataReader = System.Data.SqlClient.SqlDataReader;
-
 namespace ADODotNetRelations
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string connectionstring = "Data source=DESKTOP-FH244E0\\SQLEXPRESS;";
+            string connectionstring = "Data source=DESKTOP-FH244E0\\SQLEXPRESS; Database=ConnectToSql; Integrated Security=SSPI;";
             SqlConnection connection = new SqlConnection(connectionstring);
             var sqlcommand = new SqlCommand("select * from Customers", connection);
             connection.Open();
