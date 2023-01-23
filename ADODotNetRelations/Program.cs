@@ -20,8 +20,8 @@ namespace ADODotNetRelations
                 }
             }
             ////Insert Operation
-            string InsertCustomerQuery = "INSERT INTO UserInfo(Id, Name) VALUES(@Id,@Name)";
-            SqlCommand Insertcommad = new SqlCommand(InsertCustomerQuery, connection);
+            string InsertQuery = "INSERT INTO UserInfo(Id, Name) VALUES(@Id,@Name)";
+            SqlCommand Insertcommad = new SqlCommand(InsertQuery, connection);
             Insertcommad.Parameters.AddWithValue("@Id", 3);
             Insertcommad.Parameters.AddWithValue("@Name", "Nayab");
             int recordsadded = Insertcommad.ExecuteNonQuery();
